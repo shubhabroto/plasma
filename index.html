@@ -35,8 +35,9 @@
             nav {
                 display: flex;
                 align-items: center; /* Align logo and menu vertically in the center */
-                justify-content: space-between; /* Distribute space between logo and menu */
-                padding: 1px 1px; /* Minimal padding for the navigation bar */
+                justify-content: flex-start; /* Make sure the logo and menu are flush */
+                padding: 0; /* Remove padding for the entire navigation bar */
+                margin: 0; /* No margin for nav */
             }
 
             .logo {
@@ -48,9 +49,9 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr); /* Two columns for the menu */
                 grid-gap: 1px; /* Minimal gap between the grid items */
-                justify-items: center; /* Center items horizontally */
+                justify-items: center;
                 align-items: center; /* Center items vertically */
-                margin-left: 0px; /* Very minimal space between the logo and the menu */
+                margin-left: 10px; /* Very minimal space between the logo and the menu */
                 padding: 0; /* Remove padding around the menu */
             }
 
