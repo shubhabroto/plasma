@@ -56,27 +56,27 @@
             transition: color 0.3s ease;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background-color: #4CAF50;
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease;
-        }
+            nav a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background-color: #4CAF50;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+            }
 
-        nav a:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
+            nav a:hover::after {
+                transform: scaleX(1);
+                transform-origin: left;
+            }
 
-        nav a:hover {
-            color: #4CAF50;
-        }
+            nav a:hover {
+                color: #4CAF50;
+            }
 
         /* Main Section */
         .main {
@@ -85,13 +85,13 @@
             margin: 0 auto;
         }
 
-        .main h1 {
-            font-size: 3rem;
-            color: #4CAF50;
-            letter-spacing: 0.1em;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+            .main h1 {
+                font-size: 3rem;
+                color: #4CAF50;
+                letter-spacing: 0.1em;
+                text-align: center;
+                margin-bottom: 40px;
+            }
 
         .application-row {
             display: flex;
@@ -101,13 +101,13 @@
             flex-wrap: nowrap; /* Ensure items stay side by side */
         }
 
-        .application-row:nth-child(even) .tile {
-            order: 2;
-        }
+            .application-row:nth-child(even) .tile {
+                order: 2;
+            }
 
-        .application-row:nth-child(even) .application-image {
-            order: 1;
-        }
+            .application-row:nth-child(even) .application-image {
+                order: 1;
+            }
 
         .tile {
             flex-basis: 48%; /* Ensure that the tile takes up 48% of the row */
@@ -121,23 +121,23 @@
             animation: fadeInUp 1s ease-out forwards;
         }
 
-        .tile h2 {
-            font-size: 1.8rem;
-            color: #333;
-            margin-bottom: 20px;
-        }
+            .tile h2 {
+                font-size: 1.8rem;
+                color: #333;
+                margin-bottom: 20px;
+            }
 
-        .tile p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #666;
-            text-align: justify;
-        }
+            .tile p {
+                font-size: 1.1rem;
+                line-height: 1.8;
+                color: #666;
+                text-align: justify;
+            }
 
-        .tile:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
+            .tile:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            }
 
         .application-image {
             flex-basis: 48%; /* Ensure that the image container takes up 48% of the row */
@@ -148,17 +148,17 @@
             animation: fadeInUp 1s ease-out forwards;
         }
 
-        .application-image img {
-            width: 100%;
-            height: 300px; /* Fixed height for uniform image dimensions */
-            object-fit: cover; /* Ensure images fill the area without distortion */
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
+            .application-image img {
+                width: 100%;
+                height: 300px; /* Fixed height for uniform image dimensions */
+                object-fit: cover; /* Ensure images fill the area without distortion */
+                border-radius: 8px;
+                transition: transform 0.3s ease;
+            }
 
-        .application-image img:hover {
-            transform: scale(1.05);
-        }
+                .application-image img:hover {
+                    transform: scale(1.02);
+                }
 
         footer {
             padding: 20px;
@@ -197,10 +197,22 @@
                 order: initial;
             }
 
+            /* Change the order to display image first and text second */
+            .application-row .application-image {
+                order: 1;
+            }
+
+            .application-row .tile {
+                order: 2;
+            }
+
             .application-image img {
-                height: auto; /* Allow images to resize appropriately on smaller screens */
+                height: auto; 
             }
         }
+
+
+
     </style>
 </head>
 <body>
