@@ -31,11 +31,18 @@
         }
 
         .menu {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px; /* Ensures space between menu items */
-            padding-right: 30px;
-            padding-left: 20px;
+           
+            display: block; 
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                display: flex; 
+                justify-content: flex-end;
+                gap: 20px; 
+                padding-right: 30px;
+                padding-left: 20px;
+            }
         }
 
         nav a {
@@ -139,6 +146,7 @@
             justify-content: space-around;
             background-color: #f9f9f9;
             margin-top: 50px;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
         }
 
         .quick-link-card {
@@ -149,7 +157,21 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px; /* Adds space between rows */
         }
+
+        @media (max-width: 1024px) {
+            .quick-link-card {
+                width: 45%; /* Adjusts width for medium screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .quick-link-card {
+                width: 100%; /* Full width on smaller screens */
+            }
+        }
+
 
         .quick-link-card:hover {
             transform: translateY(-10px);
