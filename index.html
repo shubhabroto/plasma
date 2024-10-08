@@ -30,44 +30,44 @@
             z-index: 1000;
         }
 
-        /* Extremely tight spacing for the header and reduce gap between logo and menu */
+        /* Tight spacing for the header */
         @media (max-width: 767px) {
             nav {
                 display: flex;
-                align-items: center; /* Align logo and menu vertically in the center */
-                justify-content: flex-start; /* Make sure the logo and menu are flush */
-                padding: 0; /* Remove padding for the entire navigation bar */
-                margin: 0; /* No margin for nav */
+                align-items: center; 
+                justify-content: flex-start; 
+                padding: 0; 
+                margin: 0; 
             }
 
             .logo {
-                padding-left: 0px; /* Minimal left padding for the logo */
-                margin: 0; /* No margins for the logo */
+                padding-left: 0px; 
+                margin: 0; 
             }
 
             .menu {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr); /* Two columns for the menu */
-                grid-gap: 1px; /* Minimal gap between the grid items */
+                grid-template-columns: repeat(2, 1fr); 
+                grid-gap: 1px; 
                 justify-items: center;
-                align-items: center; /* Center items vertically */
-                margin-left: 0px; /* Very minimal space between the logo and the menu */
-                padding: 0; /* Remove padding around the menu */
+                align-items: center; 
+                margin-left: 0px; 
+                padding: 0; 
             }
 
             nav a {
                 display: block;
-                width: 100%; /* Full width of each grid item */
-                text-align: center; /* Center text inside each item */
-                padding: 0px 0; /* Minimal padding around text */
-                margin: 0; /* Remove any default margin */
-                background-color: #fff; /* Optional background color */
+                width: 100%; 
+                text-align: center; 
+                padding: 0px 0; 
+                margin: 0; 
+                background-color: #fff; 
                 border-radius: 10px;
-                box-shadow: none; /* Ensure no shadow or borders are shown */
+                box-shadow: none; 
             }
 
                 nav a:hover {
-                    background-color: #f0f0f0; /* Optional: Slight hover effect */
+                    background-color: #f0f0f0; 
                 }
         }
 
