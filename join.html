@@ -32,11 +32,17 @@
         }
 
         .menu {
-            display: flex;
-            justify-content: flex-end;
-            gap: 20px; /* Ensures space between menu items */
-            padding-right: 30px; 
-            padding-left: 20px;
+            display: block;
+        }
+
+        @media (min-width: 768px) {
+            .menu {
+                display: flex;
+                justify-content: flex-end;
+                gap: 20px;
+                padding-right: 30px;
+                padding-left: 20px;
+            }
         }
 
         nav a {
