@@ -101,6 +101,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .job-header:hover {
@@ -120,6 +123,16 @@
             margin: 10px 0;
         }
 
+        /* Arrow Icon */
+        .arrow-icon {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .rotate {
+            transform: rotate(90deg); /* Rotate arrow when expanded */
+        }
+
         /* Job Details Section */
         .job-details {
             display: none;
@@ -128,7 +141,7 @@
             margin-top: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            text-align: left; /* Add this line to left-align the content */
+            text-align: left; /* Left-align the job descriptions */
         }
 
         .job-details ul {
@@ -238,6 +251,7 @@
             jobHeaders.forEach(header => {
                 header.addEventListener("click", function () {
                     const jobDetails = this.nextElementSibling;
+                    const arrow = this.querySelector(".arrow-icon");
                     const isOpen = jobDetails.style.display === "block";
 
                     // Close all open job details
@@ -245,9 +259,15 @@
                         detail.style.display = "none";
                     });
 
-                    // Toggle the clicked job's details
+                    // Rotate all arrows back to original position
+                    document.querySelectorAll(".arrow-icon").forEach(icon => {
+                        icon.classList.remove("rotate");
+                    });
+
+                    // Toggle the clicked job's details and arrow rotation
                     if (!isOpen) {
                         jobDetails.style.display = "block";
+                        arrow.classList.add("rotate");
                     }
                 });
             });
@@ -278,7 +298,8 @@
         <div class="job-listing">
             <div class="job-header">
                 <h2>Embedded Systems Engineer</h2>
-                <h3>Location: Ahmedabad, Gujarat, India</h3>
+                <h3>Location: Ahmedabad, Gujarat</h3>
+                <span class="arrow-icon">&#9654;</span> <!-- Arrow icon -->
             </div>
             <div class="job-details">
                 <h3>Key Responsibilities:</h3>
@@ -304,7 +325,6 @@
                     <li>Understanding of EMC/EMI considerations in embedded design.</li>
                     <li>Excellent problem-solving and communication skills.</li>
                 </ul>
-               
             </div>
         </div>
 
@@ -312,30 +332,31 @@
         <div class="job-listing">
             <div class="job-header">
                 <h2>Power Electronics Engineer</h2>
-                <h3>Location: Ahmedabad, Gujarat, India</h3>
+                <h3>Location: Ahmedabad, Gujarat</h3>
+                <span class="arrow-icon">&#9654;</span> <!-- Arrow icon -->
             </div>
             <div class="job-details">
                 <h3>Key Responsibilities:</h3>
-                <ul>
-                    <li>Design high-efficiency power conversion systems for non-thermal plasma using resonant converters and synchronous rectifiers.</li> <li>Develop analog/digital circuits for power management with phase-shift modulation and active clamping.</li> 
-                    <li>Integrate power electronics with DSP and FPGA control algorithms for real-time optimization.</li> 
-                    <li>Optimize power systems for power density, thermal performance, and fault tolerance, ensuring safety compliance.</li> 
-                    <li>Conduct simulations and validation using Monte Carlo analysis and thermal modeling.</li> 
-                    
-                </ul>
-                <h3>Required Skills and Experience:</h3>
-                <ul>
-                    <li>Degree in Electrical Engineering, specializing in Power Electronics.</li> 
-                    <li>Expertise in high-power electronics design for plasma systems with dynamic modeling knowledge.</li> 
-                    <li>Proficient in SPICE, PLECS, MATLAB/Simulink for circuit optimization.</li> 
-                    <li>Experience with DC-DC converters, inverters, and rectifiers using wide bandgap semiconductors like SiC/GaN.</li> 
-                    <li>Strong grasp of thermal management, EMI suppression, and grounding techniques.</li> 
-                    <li>Skilled in PCB layout for high-frequency applications, ensuring signal integrity.</li> 
-                    <li>Familiarity with IEC, UL, and IPC standards.</li>
-                    <li>Strong analytical and problem-solving skills for innovative solutions.</li> 
-                </ul>
-               
-            </div>
+                    <ul>
+                        <li>Design high-efficiency power conversion systems for non-thermal plasma using resonant converters and synchronous rectifiers.</li>
+                        <li>Develop analog/digital circuits for power management with phase-shift modulation and active clamping.</li>
+                        <li>Integrate power electronics with DSP and FPGA control algorithms for real-time optimization.</li>
+                        <li>Optimize power systems for power density, thermal performance, and fault tolerance, ensuring safety compliance.</li>
+                        <li>Conduct simulations and validation using Monte Carlo analysis and thermal modeling.</li>
+
+                    </ul>
+                    <h3>Required Skills and Experience:</h3>
+                    <ul>
+                        <li>Degree in Electrical Engineering, specializing in Power Electronics.</li>
+                        <li>Expertise in high-power electronics design for plasma systems with dynamic modeling knowledge.</li>
+                        <li>Proficient in SPICE, PLECS, MATLAB/Simulink for circuit optimization.</li>
+                        <li>Experience with DC-DC converters, inverters, and rectifiers using wide bandgap semiconductors like SiC/GaN.</li>
+                        <li>Strong grasp of thermal management, EMI suppression, and grounding techniques.</li>
+                        <li>Skilled in PCB layout for high-frequency applications, ensuring signal integrity.</li>
+                        <li>Familiarity with IEC, UL, and IPC standards.</li>
+                        <li>Strong analytical and problem-solving skills for innovative solutions.</li>
+                    </ul>
+</div>
         </div>
 
         <!-- Apply Section -->
